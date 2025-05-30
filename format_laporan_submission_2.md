@@ -1,80 +1,42 @@
-# Laporan Proyek Machine Learning - Nama Anda
+# HR Analytics Dashboard - Jaya Jaya Maju
 
-## Project Overview
+## Dashboard Access
+- **URL:** http://localhost:3000
+- **Username:** root@mail.com  
+- **Password:** root123
 
-Pada bagian ini, Kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+## Dashboard Features
+- Overall attrition rate monitoring
+- Department-wise attrition analysis
+- Job satisfaction impact analysis
+- Age group attrition patterns
+- Income-based attrition insights
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-- Format Referensi dapat mengacu pada penulisan sitasi [IEEE](https://journals.ieeeauthorcenter.ieee.org/wp-content/uploads/sites/7/IEEE_Reference_Guide.pdf), [APA](https://www.mendeley.com/guides/apa-citation-guide/) atau secara umum seperti [di sini](https://penerbitdeepublish.com/menulis-buku-membuat-sitasi-dengan-mudah/)
-- Sumber yang bisa digunakan [Scholar](https://scholar.google.com/)
+## Key Insights
+1. Tingkat Attrition (Perputaran Karyawan) Cukup Tinggi:
+   - Dari total 1.058 karyawan, 179 karyawan telah keluar, menghasilkan Attrition Rate sebesar 16.9%. Angka ini diberi label "High Risk", menunjukkan bahwa tingkat attrition ini menjadi perhatian serius bagi perusahaan.
+     
+2. Departemen Riset & Pengembangan Memiliki Attrition Tertinggi:
+   - Departemen Research & Development menunjukkan jumlah attrition tertinggi dibandingkan dengan departemen lain, disusul oleh Sales, dan Human Resources. Ini mengindikasikan bahwa R&D mungkin menghadapi tantangan unik yang menyebabkan karyawan meninggalkan perusahaan.
 
-## Business Understanding
+3. Karyawan Pria Memiliki Tingkat Attrition Lebih Tinggi:
+   - Secara gender, karyawan pria menyumbang 60.3% dari total attrition, sementara wanita menyumbang 39.7%. Ini menunjukkan bahwa perusahaan perlu memahami faktor-faktor yang mungkin lebih mempengaruhi karyawan pria untuk meninggalkan organisasi.
 
-Pada bagian ini, Anda perlu menjelaskan proses klarifikasi masalah.
+4. JobRole dengan Attrition Tertinggi Bervariasi:
+   - JobRole "Laboratory Technician" dan "Sales Representative" memiliki jumlah attrition absolut yang tinggi.
+   - Meskipun demikian, secara persentase dari total attrition, "Laboratory Technician" (27.37%) dan "Sales Representative" (13.97%) adalah kontributor terbesar.
+   - JobRole "Research Director" memiliki persentase attrition terendah (1.12%).
 
-Bagian laporan ini mencakup:
+5. Rata-rata Usia Karyawan:
+   Rata-rata usia karyawan adalah 37.06 tahun. Ini dapat menjadi informasi latar belakang untuk memahami demografi tenaga kerja secara keseluruhan.
 
-### Problem Statements
+Rekomendasi Awal (Berdasarkan Insights):
 
-Menjelaskan pernyataan masalah:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+- Investigasi Departemen R&D: Lakukan analisis mendalam mengapa tingkat attrition di R&D sangat tinggi. Apakah ada masalah dengan beban kerja, manajemen, kompensasi, atau peluang pengembangan?
+- Analisis Attrition Berdasarkan Gender: Selidiki faktor-faktor yang mungkin berkontribusi pada tingginya attrition di kalangan karyawan pria.
+- Fokus pada JobRole Kritis: Perhatikan lebih dekat JobRole seperti "Laboratory Technician" dan "Sales Representative" untuk memahami pemicu attrition di posisi-posisi tersebut.
+- Program Retensi Karyawan: Kembangkan strategi retensi karyawan yang ditargetkan berdasarkan insights dari departemen, gender, dan jobrole yang paling terpengaruh.
 
-### Goals
-
-Menjelaskan tujuan proyek yang menjawab pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Approach” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
-
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution approach (algoritma atau pendekatan sistem rekomendasi).
-
-## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai jumlah data, kondisi data, dan informasi mengenai data yang digunakan. Sertakan juga sumber atau tautan untuk mengunduh dataset. Contoh: [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/Restaurant+%26+consumer+data).
-
-Selanjutnya, uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
-
-Variabel-variabel pada Restaurant UCI dataset adalah sebagai berikut:
-- accepts : merupakan jenis pembayaran yang diterima pada restoran tertentu.
-- cuisine : merupakan jenis masakan yang disajikan pada restoran.
-- dst
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data beserta insight atau exploratory data analysis.
-
-## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
-
-## Modeling
-Tahapan ini membahas mengenai model sisten rekomendasi yang Anda buat untuk menyelesaikan permasalahan. Sajikan top-N recommendation sebagai output.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menyajikan dua solusi rekomendasi dengan algoritma yang berbeda.
-- Menjelaskan kelebihan dan kekurangan dari solusi/pendekatan yang dipilih.
-
-## Evaluation
-Pada bagian ini Anda perlu menyebutkan metrik evaluasi yang digunakan. Kemudian, jelaskan hasil proyek berdasarkan metrik evaluasi tersebut.
-
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
-
-**---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
+## Files Included
+- metabase.db.mv.db (Database export)
+- Dashboard screenshots
