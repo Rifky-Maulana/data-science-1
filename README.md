@@ -56,27 +56,90 @@ Proyek ini akan difokuskan pada:
    - Menyusun metrik kunci (Key Performance Indicators) untuk mengukur keberhasilan intervensi dan strategi retensi ke depan.
 
 
-### Persiapan
+## Persiapan
 
-Sumber data: ....
+### Sumber Data
 
-Setup environment:
+Dataset yang digunakan berasal dari perusahaan **Jaya Jaya Maju**, yang mencakup informasi:
+
+- Data demografis karyawan
+- Departemen
+- Job Role
+- Status Attrition (Keluar atau Tetap)
+
+Jumlah data:
+- **Total Karyawan:** 1.058
+- **Karyawan Keluar (Attrition):** 179
+- **Karyawan Tetap:** 879
+
+### Setup Environment
+
+Bahasa pemrograman: **Python**
+
+Library yang digunakan:
 
 ```
+python
+# Import libraries yang diperlukan
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
+import streamlit as st
 
+
+# Konfigurasi visualisasi
+plt.style.use('default')
+sns.set_palette("husl")
 ```
 
-## Business Dashboard
+### Business Dashboard
+Business dashboard telah dikembangkan menggunakan teknologi web modern dengan fitur-fitur komprehensif untuk monitoring attrition analysis. Dashboard ini dapat diakses dengan kredensial berikut:
+Akses Dashboard:
+```
+URL: http://localhost:3000
+Username: root@mail.com
+Password: root123
+```
+Fitur Dashboard meliputi:
 
-Jelaskan tentang business dashboard yang telah dibuat. Jika ada, sertakan juga link untuk mengakses dashboard tersebut.
+1. Overall Attrition Rate Monitoring
+   - Menampilkan tingkat attrition keseluruhan (16,9%) dengan indikator status "High Risk"
+   - Real-time tracking perubahan attrition rate
 
-## Conclusion
+2. Department-wise Attrition Analysis
+   - Visualisasi bar chart menunjukkan distribusi attrition per departemen
+   - R&D Department tertinggi (114 karyawan keluar), diikuti Sales (56 karyawan)
 
-Jelaskan konklusi dari proyek yang dikerjakan.
+3. Job Satisfaction Impact Analysis
+   - Breakdown attrition berdasarkan job role dengan persentase detail
+   - Laboratory Technician (27,37%) dan Sales Executive (21,79%) sebagai fokus utama
 
-### Rekomendasi Action Items (Optional)
+4. Age Group Attrition Patterns
+   - Analisis rata-rata usia karyawan yang keluar (37,06 tahun)
+   - Membantu mengidentifikasi pola attrition berdasarkan demografi usia
 
-Berikan beberapa rekomendasi action items yang harus dilakukan perusahaan guna menyelesaikan permasalahan atau mencapai target mereka.
+5. Income-based Attrition Insights
+   - Korelasi antara tingkat kompensasi dengan keputusan karyawan keluar
+   - Memungkinkan analisis cost-benefit untuk strategi retensi
 
-- action item 1
-- action item 2
+Dashboard ini memberikan kemudahan bagi tim HR untuk:
+- Monitoring real-time attrition trends
+- Identifikasi departemen dan role berisiko tinggi
+- Pengambilan keputusan berbasis data untuk strategi retensi
+
+### Conclusion
+Berdasarkan analisis data HR Analytics Jaya Jaya Maju, dapat disimpulkan bahwa:
+**Temuan Utama:**
+
+1. Tingkat attrition 16,9% termasuk kategori High Risk dan memerlukan intervensi segera
+2. Departemen R&D menjadi area kritikal dengan 114 karyawan keluar (63,7% dari total attrition)
+3. Laboratory Technician sebagai job role dengan attrition tertinggi (27,37%)
+4. Gender disparity menunjukkan laki-laki lebih rentan keluar (60,3% vs 39,7%)
+5. Usia produktif (rata-rata 37,06 tahun) menjadi demografi yang paling banyak keluar
+
+Expected Impact:
+Dengan implementasi strategi ini, perusahaan diharapkan dapat menurunkan attrition rate dari 16,9% menjadi di bawah 10% dalam 12 bulan ke depan, menghemat biaya rekrutmen dan training, serta meningkatkan produktivitas dan stabilitas operasional.
