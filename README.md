@@ -56,9 +56,11 @@ Proyek ini akan difokuskan pada:
    - Menyusun metrik kunci (Key Performance Indicators) untuk mengukur keberhasilan intervensi dan strategi retensi ke depan.
 
 
-## Persiapan
+## Persiapan Proyek
 
-### Sumber Data
+Pastikan instruksi dijelaskan dengan sistematis agar proyek dapat dijalankan tanpa hambatan. Berikut beberapa hal penting yang harus dijelaskan:
+
+### 📂 Melampirkan Sumber Data
 
 Dataset yang digunakan berasal dari perusahaan **Jaya Jaya Maju**, yang mencakup informasi:
 
@@ -67,35 +69,77 @@ Dataset yang digunakan berasal dari perusahaan **Jaya Jaya Maju**, yang mencakup
 - Job Role
 - Status Attrition (Keluar atau Tetap)
 
-Jumlah data:
+**Jumlah Data:**
+
 - **Total Karyawan:** 1.058
 - **Karyawan Keluar (Attrition):** 179
 - **Karyawan Tetap:** 879
 
-### Setup Environment
+Data disimpan secara online di **Supabase** dan diakses menggunakan SQLAlchemy dengan session pooling.
 
-Bahasa pemrograman: **Python**
-
-Library yang digunakan:
-
-```
-python
-# Import libraries yang diperlukan
+```python
+# Import libraries
 import pandas as pd
+from sqlalchemy import create_engine
+
+# Connection string
+DB_URL = "postgresql://<username>:<password>@<host>:<port>/<database>"
+
+# Create engine
+engine = create_engine(DB_URL)
+
+# Test connection
+df = pd.read_sql("SELECT version()", engine)
+print("✅ Connected!")
+print(df)
+```
+
+### 🐍 Membuat dan Mengaktifkan Virtual Environment (venv)
+
+Untuk menjaga lingkungan pengembangan tetap stabil dan terisolasi:
+
+```bash
+# Membuat virtual environment
+python -m venv venv
+```
+
+ **Mengaktifkan virtual environment (Windows)**
+```
+venv\Scripts\activate
+```
+**Mengaktifkan virtual environment (Linux/Mac)**
+```
+source venv/bin/activate
+```
+
+### 📦 Menginstall Dependensi dari `requirements.txt`
+
+Instal seluruh pustaka yang dibutuhkan menggunakan pip:
+
+```bash
+pip install -r requirements.txt
+```
+
+Contoh library yang digunakan:
+
+```python
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
-import streamlit as st
-
-
-# Konfigurasi visualisasi
-plt.style.use('default')
-sns.set_palette("husl")
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report, confusion_matrix, roc_auc_score, roc_curve
+from sklearn.preprocessing import LabelEncoder, StandardScaler
+import warnings
+from sqlalchemy import create_engine, text
+from sklearn.metrics import roc_auc_score, classification_report
+warnings.filterwarnings('ignore')
 ```
 
+---
 ### Business Dashboard
 Business dashboard telah dikembangkan menggunakan teknologi web modern dengan fitur-fitur komprehensif untuk monitoring attrition analysis. Dashboard ini dapat diakses dengan kredensial berikut:
 Akses Dashboard:
