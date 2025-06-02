@@ -64,10 +64,43 @@ Pastikan instruksi dijelaskan dengan sistematis agar proyek dapat dijalankan tan
 
 Dataset yang digunakan berasal dari perusahaan **Jaya Jaya Maju**, yang mencakup informasi:
 
-- Data demografis karyawan
-- Departemen
-- Job Role
-- Status Attrition (Keluar atau Tetap)
+| No. | Kolom                      | Penjelasan                                                                 |
+|-----|----------------------------|---------------------------------------------------------------------------|
+| 1   | Age                        | Ini adalah kolom yang berisi umur pegawai.                                |
+| 2   | Attrition                  | Ini adalah kolom yang berisi status keluar/tidaknya pegawai dari perusahaan. |
+| 3   | BusinessTravel             | Ini adalah kolom yang berisi frekuensi perjalanan dinas pegawai.           |
+| 4   | DailyRate                  | Ini adalah kolom yang berisi tarif harian gaji pegawai.                    |
+| 5   | Department                 | Ini adalah kolom yang berisi departemen tempat pegawai bekerja.           |
+| 6   | DistanceFromHome           | Ini adalah kolom yang berisi jarak rumah pegawai ke tempat kerja (dalam km/mil). |
+| 7   | Education                  | Ini adalah kolom yang berisi tingkat pendidikan pegawai.                  |
+| 8   | EducationField             | Ini adalah kolom yang berisi bidang pendidikan pegawai.                   |
+| 9   | EmployeeCount              | Ini adalah kolom yang berisi jumlah pegawai (mungkin bernilai 1 untuk setiap baris). |
+| 10  | EnvironmentSatisfaction    | Ini adalah kolom yang berisi tingkat kepuasan pegawai terhadap lingkungan kerja. |
+| 11  | Gender                     | Ini adalah kolom yang berisi jenis kelamin pegawai.                       |
+| 12  | HourlyRate                 | Ini adalah kolom yang berisi tarif upah per jam pegawai.                  |
+| 13  | JobInvolvement             | Ini adalah kolom yang berisi tingkat keterlibatan pegawai dalam pekerjaan. |
+| 14  | JobLevel                   | Ini adalah kolom yang berisi level pekerjaan pegawai.                     |
+| 15  | JobRole                    | Ini adalah kolom yang berisi peran/jabatan pegawai.                       |
+| 16  | JobSatisfaction            | Ini adalah kolom yang berisi tingkat kepuasan pegawai terhadap pekerjaan. |
+| 17  | MaritalStatus              | Ini adalah kolom yang berisi status pernikahan pegawai.                   |
+| 18  | MonthlyIncome              | Ini adalah kolom yang berisi pendapatan bulanan pegawai.                  |
+| 19  | MonthlyRate                | Ini adalah kolom yang berisi tarif bulanan gaji pegawai.                  |
+| 20  | NumCompaniesWorked         | Ini adalah kolom yang berisi jumlah perusahaan tempat pegawai pernah bekerja sebelumnya. |
+| 21  | Over18                     | Ini adalah kolom yang berisi status apakah pegawai berusia di atas 18 tahun (Ya/Tidak). |
+| 22  | OverTime                   | Ini adalah kolom yang berisi status lembur pegawai.                       |
+| 23  | PercentSalaryHike          | Ini adalah kolom yang berisi persentase kenaikan gaji pegawai.            |
+| 24  | PerformanceRating          | Ini adalah kolom yang berisi rating kinerja pegawai.                      |
+| 25  | RelationshipSatisfaction   | Ini adalah kolom yang berisi tingkat kepuasan pegawai terhadap hubungan kerja dengan rekan. |
+| 26  | StandardHours              | Ini adalah kolom yang berisi jam kerja standar pegawai.                   |
+| 27  | StockOptionLevel           | Ini adalah kolom yang berisi level opsi saham yang dimiliki pegawai.      |
+| 28  | TotalWorkingYears          | Ini adalah kolom yang berisi total tahun pengalaman kerja pegawai.        |
+| 29  | TrainingTimesLastYear      | Ini adalah kolom yang berisi frekuensi pelatihan yang diikuti pegawai tahun lalu. |
+| 30  | WorkLifeBalance            | Ini adalah kolom yang berisi tingkat keseimbangan kerja-hidup pegawai.    |
+| 31  | YearsAtCompany             | Ini adalah kolom yang berisi lama pegawai bekerja di perusahaan (dalam tahun). |
+| 32  | YearsInCurrentRole         | Ini adalah kolom yang berisi lama pegawai berada di peran saat ini (dalam tahun). |
+| 33  | YearsSinceLastPromotion    | Ini adalah kolom yang berisi waktu sejak promosi terakhir pegawai (dalam tahun). |
+| 34  | YearsWithCurrManager       | Ini adalah kolom yang berisi lama pegawai bekerja dengan manajer saat ini (dalam tahun). |
+
 
 **Jumlah Data:**
 
